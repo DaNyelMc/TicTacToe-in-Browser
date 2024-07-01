@@ -1,2 +1,2 @@
 # Tic-Tac-Toe-in-Browser
- Tic Tac Toe
+ Simple Tic Tac Toe game in browser made by DaNyel.
