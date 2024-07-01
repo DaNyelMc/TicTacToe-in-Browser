@@ -1,0 +1,203 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #b4dd64;
+}
+
+#gameContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+}
+
+#boardANDreset {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#boardContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+#hLine1, #hLine2, #vLine1, #vLine2 {
+    width: 500px;
+    height:30px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+#linesCon {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(-11px 10px 33px rgba(0, 0, 0, 0.15)) drop-shadow(-44px 42px 61px rgba(0, 0, 0, 0.13)) drop-shadow(-99px 94px 82px rgba(0, 0, 0, 0.08)) drop-shadow(-177px 167px 97px rgba(0, 0, 0, 0.02)) drop-shadow(-276px 260px 106px rgba(0, 0, 0, 0.00));
+}
+
+#hLineCon, #vLineCon {
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+}
+
+#vLineCon {
+    rotate: 90deg;
+}
+
+#buttonCon {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.boardBt {
+    width: 146px;
+    height: 146px;
+    cursor: pointer;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px dashed red; */
+    background-color: transparent;
+}
+
+.emptyMark {
+    width: 146px;
+    height: 146px;
+    /* background-color: aqua; */
+}
+
+.markO {
+    height: 75px;
+    width: 75px;
+    border-radius: 100px;
+    border: 17px solid #1B8B00;
+    fill: #1B8B00;
+    filter: drop-shadow(-2px 3px 8px rgba(0, 0, 0, 0.25)) drop-shadow(-9px 10px 14px rgba(0, 0, 0, 0.21)) drop-shadow(-21px 23px 19px rgba(0, 0, 0, 0.13)) drop-shadow(-38px 41px 22px rgba(0, 0, 0, 0.04)) drop-shadow(-59px 64px 24px rgba(0, 0, 0, 0.00));
+}
+
+.markX {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#leftLeg, #rightLeg {
+    filter: drop-shadow(-2px 1px 5px rgba(0, 0, 0, 0.29)) drop-shadow(-8px 6px 10px rgba(0, 0, 0, 0.26)) drop-shadow(-17px 13px 13px rgba(0, 0, 0, 0.15)) drop-shadow(-31px 22px 15px rgba(0, 0, 0, 0.04)) drop-shadow(-49px 35px 17px rgba(0, 0, 0, 0.01));
+    width: 17px;
+    height: 122px;
+    border-radius: 3px;
+    background-color: #002801;
+    position: absolute;
+}
+
+#leftLeg {
+    rotate: -45deg;
+}
+
+#rightLeg {
+    rotate: 45deg;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 27px 55px;
+    background-color: #EAF1FA;
+    border-radius: 15px;
+    font-size: 41px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 0;
+    display: none;
+    box-shadow: -3px 4px 11px 0px rgba(0, 0, 0, 0.10), -12px 16px 20px 0px rgba(0, 0, 0, 0.09), -27px 37px 27px 0px rgba(0, 0, 0, 0.05), -48px 65px 32px 0px rgba(0, 0, 0, 0.01), -75px 102px 36px 0px rgba(0, 0, 0, 0.00);
+}
+
+@media (max-width: 650px) {
+    #boardANDreset {
+        min-height: 50%;
+        max-height: 60%;
+    }
+    #boardContainer {
+        width: 300px;
+        height: 300px;
+    }
+    #linesCon {
+        width: 300px;
+        height: 300px;
+    }
+    #hLine1, #hLine2, #vLine1, #vLine2 {
+        width: 300px;
+        height:18px;
+        border-radius: 4px;
+    }
+    #hLineCon, #vLineCon {
+        width: 300px;
+        height: 300px;
+    }
+    .emptyMark {
+        width: 87.6px;
+        height: 87.6px;
+    }
+    .markO {
+        height: 45px;
+        width: 45px;
+        border: 10.2px solid #1B8B00;
+    }
+    .markX {
+        width: 66px;
+        height: 66px;
+    }
+    #leftLeg, #rightLeg {
+        width: 10.2px;
+        height: 73.2px;
+    }
+    .boardBt {
+        width: 87.6px;
+        height: 87.6px;
+    }
+    #buttonCon {
+        width: 300px;
+        height: 300px;
+    }
+    #resetButton {
+        padding: 16.2px 33px;
+        border-radius: 9px;
+        font-size: 24.6px;
+    }
+}
